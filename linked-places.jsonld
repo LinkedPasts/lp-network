@@ -1,7 +1,6 @@
-{	"type": "FeatureCollection",
-	// publish this context as https://github.com/LinkedPasts/linked-places.jsonld
+{
 	"@context": {
-		// GeoJSON prefixes
+		// begin GeoJSON prefixes
     "geojson": "https://purl.org/geojson/vocab#",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
@@ -44,7 +43,6 @@
 		"id:": "@id", // always a uri
 		"type": "@type",
 		"identifier": "dcterms:identifier",
-		// don't understand this object form; mimicked from https://linked.art/ns/v1/linked-art.json
     "label": {"@id": "rdfs:label"},
 		"title": {"@id": "dcterms:title"},
 		"when": {"@id": "lp:when"},
@@ -96,106 +94,5 @@
 		"see_also": "rdfs:seeAlso",
 		"value": {"@id": "rdf:value"},
 		"license": "dcterms:license",
-	},
-	"features": [
-		{	"type": "Feature",
-			"id": "http://www.mygazetteer.org/places/pl_12345",
-			"identifier": "pl_12345", // contributor's local id
-			"geometry": {
-				"type": "GeometryCollection",
-				"geometries": [
-					{	"type": "Point",
-						"coordinates": [5.16, 52.05],
-						"certainty": "certain" // optional ?? "approx", "estimated" ??
-						// RSi: agreed we should standardize *something* at some point.
-					},
-					{
-						"type": "Polygon",
-						"coordinates": [[
-							[5.10,52.0],[5.20,52.0],[5.20,52.1],
-							[5.10,52.1],[5.10,52.0]]],
-						// accept either short form as shown (#1; single 5-part timespan) or long form (#2 below)
-						"when": { "timespans": [["-250","","","200","Mid Greco-Roman"]] }, // #1
-						"source": "http://www.mygazetteer.org/documents/9876"
-					}
-				]
-			},
-			"properties": {
-				"title": "Athens", // auto-copied from 'en' label, pending internationalization
-				"modern_country": "GR"
-			},
-			"labels": [
-				{	"text":"Athens",
-					"lang": "en"
-				}
-			],
-			"descriptions": [{
-				"value":"A major Greek city-state",
-				"lang": "en"
-			}],
-			// long form (as shown here) or short form (#1, above)
-			// corresponds to geojson-ldt and PeriodO syntax
-			// https://github.com/kgeographer/geojson-ldt
-			"when": { 
-				"timespans": [
-					{"start": {
-						"label": "750 BCE", 
-						"in": {"year": "-750"}
-					},
-					"end": {
-						"label": "640 CE", 
-						"in": {"year": "640"}},
-					}
-				],
-				"periods":[
-					{	"name": "Greco-Roman",
-						"uri": "http://n2t.net/ark:/99152/p03wskd389m}" }
-				],
-			},
-			"names": [ 
-				{ "name": "Athens", "lang": "en", "type": "preferred", "when": {}},
-				{ "name": "Athenae", "type": "variant"},
-				{ "name": "Αθήνα",
-					"lang": "el",
-					"attestation": {
-						"id": "http://www.mygazetteer.org/att/0001",
-						// optional detail
-						"publisher": "http://www.mygazetteer.org",
-						"evidence": "http://www.mygazetteer.org/documents/01234",
-						"cnt:chars": "Αθήνα"
-					} }
-			],
-			// *** given optional per-name detail, this is redundant, no? ***
-			"attestations": [
-				{	"uri": {"@id": "http://www.mygazetteer.org/att/0001"},
-					"dcterms:publisher": "http://www.mygazetteer.org",
-					"cito:citesAsEvidence": "http://www.mygazetteer.org/documents/01234",
-					"cnt:chars": "Αθήνα"
-				}
-			],
-			"place_types": [ 
-				{	"id": "aat:300008347", "label": "inhabited places" }
-			],
-			"part_of": [
-				{	"id": "http://www.mygazetteer.org/place/Greece",
-					"when": {"timespans": [["-750","640"]]}
-				}
-			],
-			"depictions": [
-				{	"title": "The Parthenon",
-					"uri": {"@id": "http://www.ex.com/images/parthenon_001.jpg"},
-					"license": "cc:by-sa/3.0/"
-				}
-			],
-			"related": [
-				// *** allow all of these? ***
-				{"type": "exact_match", "id":"http://pleiades.stoa.org/places/579885"},
-				{"type": "close_match", "id":"http://sws.geonames.org/264371/"},
-				{"type": "subject_of", "id":"https://en.wikipedia.org/wiki/Athens"},
-				{"type": "see_also", "id":"https://en.wikipedia.org/wiki/Ancient_Greece"}
-				{"type": "primary_topic_of", "id": "http://www.mygazetteer.org/place/Athens.html"},
-				{"type": "primary_topic_of", "id": "https://en.wikipedia.org/wiki/Athens"},
-			]
-		}
-	]
+	}
 }
