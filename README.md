@@ -12,4 +12,4 @@ Work-in-progress JSON-LD update to the [Pelagios Gazetteer Interconnection Forma
 
 [latest example @ JSON-LD playground](http://tinyurl.com/yd5brj66)
 
-*NOTE*: The JSON-LD 1.0 specification does not support lists of lists, so the GeoJSON-LD geometries will not validate as JSON-LD. The above sample _*is*_ valid GeoJSON, however. The [JSON-LD 1.1 spec in development](https://json-ld.org/spec/latest/json-ld/) promises a workaround to this problem when completed.
+*NOTE*: The JSON-LD 1.0 specification does not support lists of lists, so the GeoJSON-LD geometries will not validate as JSON-LD. The above example [_*is*_ valid GeoJSON](https://github.com/LinkedPasts/lp-network/blob/master/place-v3-example.json), however. The [JSON-LD 1.1 spec in development](https://json-ld.org/spec/latest/json-ld/) promises a workaround to this problem when completed.
