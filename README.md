@@ -10,4 +10,4 @@ Work-in-progress update to the [Pelagios Gazetteer Interconnection Format](https
 
 - place-v{n}-context.jsonld: _JSON-LD context_
 
-[latest example @ JSON-LD playground](http://tinyurl.com/ybjg59ed)
+[latest example @ JSON-LD playground](http://tinyurl.com/yd5brj66)
