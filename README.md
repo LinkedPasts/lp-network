@@ -4,7 +4,7 @@ Linking Historical Research Data
 
 #### Place Interconnection Format
 
-Work-in-progress update to the [Pelagios Gazetteer Interconnection Format], for use in [Peripleo](http://peripleo.pelagios.org) and [World-Historical Gazetteer](http://whgazetteer.org).
+Work-in-progress update to the [Pelagios Gazetteer Interconnection Format](https://github.com/pelagios/pelagios-cookbook/wiki/Pelagios-Gazetteer-Interconnection-Format), for future use in [Peripleo](http://peripleo.pelagios.org) and [World-Historical Gazetteer](http://whgazetteer.org).
 
 - place-v{n}-example.jsonld: _sample record_
 
