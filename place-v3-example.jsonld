@@ -100,14 +100,15 @@
           "type": "GeometryCollection",
           "geometries": [
             { "type": "Point",
-              "coordinates": [5.16, 52.05],
+              "coordinates": [23.73, 37.98],
               "certainty": "certain" 
             },
             {
               "type": "Polygon",
               "coordinates": [[
-                [5.10,52.0],[5.20,52.0],[5.20,52.1],
-                [5.10,52.1],[5.10,52.0]]],
+                [23.68, 37.93],[23.77,37.93],[23.77,38.03],
+                [23.68,38.03],[23.68,37.93]
+              ]],
               "when": { "timespans": [["-250","","","200","Mid Greco-Roman"]] },
               "source": "http://www.mygazetteer.org/documents/9876"
             }
@@ -145,14 +146,13 @@
           ]
         },
         "names": [ 
-          { "label": "Athens", "lang": "en", "type": "preferred", "when": {}},
+          { "label": "Athens", "lang": "en", "type": "preferred" },
           { "label": "Athenae", "lang": "el-Latn", "type": "variant"},
-          { "label": "Αθήνα", "lang": "el",
+          { "label": "Αθήνα", 
+            "lang": "el",
             "attestation": {
-              "@id": "http://www.mygazetteer.org/att/0001",
               "publisher": "http://www.mygazetteer.org",
-              "evidence": "http://www.mygazetteer.org/documents/01234",
-              "characters": "Αθήνα"
+              "evidence": "http://www.mygazetteer.org/documents/01234"
             } }
         ],
         "place_types": [ 
