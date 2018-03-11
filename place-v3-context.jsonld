@@ -1,4 +1,4 @@
-"@context": {
+{"@context": {
   "geojson": "https://purl.org/geojson/vocab#",
   "Feature": "geojson:Feature",
   "FeatureCollection": "geojson:FeatureCollection",
@@ -14,14 +14,13 @@
   "features": { "@container": "@set",  "@id": "geojson:features" },
   "geometry": "geojson:geometry",
   "properties": "geojson:properties",
-
   "lp": "http://linkedpasts.org/vocab#",
   "when": {"@id": "lp:when"},
   "timespans": { "@container": "@set",  "@id": "lp:timespans" },
   "periods": { "@container": "@set",  "@id": "lp:periods" },
   "start": {"@container": "@set",  "@id": "lp:start" },
   "end": { "@container": "@set",  "@id": "lp:end" },
-  
+
   "aat": "http://vocab.getty.edu/aat/",
   "cc": "http://creativecommons.org/licenses/",
   "characters": "http://www.w3.org/2011/content#chars",
@@ -36,7 +35,7 @@
   "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
   "skos": "http://www.w3.org/2004/02/skos/core#",
-  "id:": "@id", 
+  "id:": "@id",
   "type": "@type",
   "value": {"@id": "rdf:value"},
   "identifier": "dcterms:identifier",
@@ -90,4 +89,4 @@
   "exact_match": { "@container": "@list", "@id":"skos:exactMatch"},
   "see_also": { "@container": "@list", "@id":"rdfs:seeAlso"},
   "license": "dcterms:license"
-}
+}}
