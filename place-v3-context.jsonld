@@ -16,11 +16,10 @@
   "properties": "geojson:properties",
   "lp": "http://linkedpasts.org/vocab#",
   "when": {"@id": "lp:when"},
-  "timespans": { "@container": "@set",  "@id": "lp:timespans" },
+  "timespans": { "@container": "@list",  "@id": "lp:timespans" },
   "periods": { "@container": "@set",  "@id": "lp:periods" },
   "start": {"@container": "@set",  "@id": "lp:start" },
   "end": { "@container": "@set",  "@id": "lp:end" },
-
   "aat": "http://vocab.getty.edu/aat/",
   "cc": "http://creativecommons.org/licenses/",
   "characters": "http://www.w3.org/2011/content#chars",
