@@ -1,0 +1,91 @@
+{
+"@context": {
+  "language": "http://purl.org/dc/terms/language",
+  "stop": "http://www.w3.org/2006/time#intervalFinishedBy",
+  "spatialCoverageDescription": "periodo:spatialCoverageDescription",
+  "earliestYear": {
+    "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+    "@id": "periodo:earliestYear"
+  },
+  "source": "http://purl.org/dc/terms/source",
+  "in": "http://www.w3.org/2006/time#hasDateTimeDescription",
+  "inDataset": {
+    "@type": "@id",
+    "@id": "http://rdfs.org/ns/void#inDataset"
+  },
+  "start": "http://www.w3.org/2006/time#intervalStartedBy",
+  "periodCollections": {
+    "@container": "@index",
+    "@id": "http://www.w3.org/2000/01/rdf-schema#member"
+  },
+  "sameAs": {
+    "@type": "@id",
+    "@id": "http://www.w3.org/2002/07/owl#sameAs"
+  },
+  "localizedLabels": {
+    "@container": "@language",
+    "@id": "http://www.w3.org/2004/02/skos/core#altLabel"
+  },
+  "PeriodDefinition": "http://www.w3.org/2004/02/skos/core#Concept",
+  "type": "@type",
+  "contributors": {
+    "@container": "@set",
+    "@id": "http://purl.org/dc/terms/contributor"
+  },
+  "title": "http://purl.org/dc/terms/title",
+  "dateAccessed": {
+    "@type": "http://www.w3.org/2001/XMLSchema#date",
+    "@id": "http://purl.org/dc/terms/date"
+  },
+  "abstract": "http://purl.org/dc/terms/abstract",
+  "collection": {
+    "@type": "@id",
+    "@id": "http://www.w3.org/2004/02/skos/core#inScheme"
+  },
+  "periodo": "http://n2t.net/ark:/99152/p0v#",
+  "name": "http://xmlns.com/foaf/0.1/name",
+  "definitions": {
+    "@reverse": "http://www.w3.org/2004/02/skos/core#inScheme",
+    "@container": "@index"
+  },
+  "spatialCoverage": {
+    "@container": "@set",
+    "@id": "http://purl.org/dc/terms/spatial"
+  },
+  "editorialNote": "http://www.w3.org/2004/02/skos/core#editorialNote",
+  "url": {
+    "@type": "@id",
+    "@id": "http://xmlns.com/foaf/0.1/page"
+  },
+  "PeriodCollection": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "id": "@id",
+  "label": "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "latestYear": {
+    "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+    "@id": "periodo:latestYear"
+  },
+  "partOf": {
+    "@type": "@id",
+    "@id": "http://purl.org/dc/terms/isPartOf"
+  },
+  "year": {
+    "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+    "@id": "http://www.w3.org/2006/time#year"
+  },
+  "primaryTopicOf": {
+    "@type": "@id",
+    "@id": "http://xmlns.com/foaf/0.1/isPrimaryTopicOf"
+  },
+  "locator": "http://purl.org/ontology/bibo/locator",
+  "yearPublished": {
+    "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+    "@id": "http://purl.org/dc/terms/issued"
+  },
+  "@base": "http://n2t.net/ark:/99152/",
+  "note": "http://www.w3.org/2004/02/skos/core#note",
+  "creators": {
+    "@container": "@set",
+    "@id": "http://purl.org/dc/terms/creator"
+  }
+}
+}

@@ -1,0 +1,25 @@
+// This is an example of using bnode properties to define a property graph I worked up before (@markuslanthaler):
+
+[
+	{"@id": "", "@type": "rdf:BoundDataset"},
+	{"@id": "p1", "name": "Abingdon", "type": "settlement", "_:parent_p1p3":"p3", "_:parent_p1p4":"p4"},
+	{"@id": "p2", "name": "Oxford", "type": "settlement", "_:parent_p2p4": "p4"},
+	{"@id": "p3", "name": "Berkshire", "type": "county"},
+	{"@id": "p4", "name": "Oxfordshire", "type": "county"},
+	{	"@id": "_:parent_p1p3", 
+		"rdfs:subPropertyOf": "hasParent", 
+		"earliestStart": 1600,
+		"latestStart": 1700,
+		"latestEnd": 1974,
+		"label": "from 17c. until 1974"},
+	{	"@id": "_:parent_p1p4", 
+		"rdfs:subPropertyOf": "hasPparent", 
+		"earliestStart": 1974, 
+		"latestEnd": 2018,
+		"label": "from 1974"},
+	{	"@id": "_:parent_p2p4", 
+		"rdfs:subPropertyOf": "hasParent", 
+		"earliestStart": 1000, 
+		"latestEnd": 2018,
+		"label": "from 11c."}
+]
