@@ -8,7 +8,7 @@ Work-in-progress update to the [Pelagios Gazetteer Interconnection Format (PGIF)
 
 PGIFv2 is valid GeoJSON. A challenge remains to convert place records represented this way to a valid RDF syntax, e.g. JSON-LD or RDF/XML. Some experimentation is under way (see below), which will be informed by upcoming work on an updated JSON-LD spec (1.0 -> 1.1) in summer of 2018.
 
-- ./pgif_v2{x}.json: _latest annotated draft for comment_
+- ./pgif_v2{x}_json.txt: _latest annotated draft for comment_
 
 #### JSON-LD experiments
 
