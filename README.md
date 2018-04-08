@@ -1,14 +1,22 @@
 ## Linked Pasts Network
 
-Linking Historical Research Data
+A workspace for technical matters related to linking historical research data
 
-#### Place Interconnection Format
+#### Place Interconnection Format (PGIFv2)
 
-Work-in-progress JSON-LD update to the [Pelagios Gazetteer Interconnection Format](https://github.com/pelagios/pelagios-cookbook/wiki/Pelagios-Gazetteer-Interconnection-Format), for future use in [Peripleo](http://peripleo.pelagios.org) and [World-Historical Gazetteer](http://whgazetteer.org). The format constitutes an example of a proposed GeoJSON extension, [GeoJSON-LDT](https://github.com/kgeographer/geojson-ldt)
+Work-in-progress update to the [Pelagios Gazetteer Interconnection Format (PGIF)](https://github.com/pelagios/pelagios-cookbook/wiki/Pelagios-Gazetteer-Interconnection-Format), for future use in contributing to [Peripleo](http://peripleo.pelagios.org) and [World-Historical Gazetteer](http://whgazetteer.org). The format constitutes an example of a proposed GeoJSON extension, [GeoJSON-T](https://github.com/kgeographer/geojson-t)
 
-- place-v{n}-example.jsonld: _sample record_
+PGIFv2 is valid GeoJSON. A challenge remains to convert place records represented this way to a valid RDF syntax, e.g. JSON-LD or RDF/XML. Some experimentation is under way (see below), which will be informed by upcoming work on an updated JSON-LD spec (1.0 -> 1.1) in summer of 2018.
 
-- place-v{n}-context.jsonld: _JSON-LD context_
+- ./pgif_v2{x}.json: _latest annotated draft for comment_
+
+#### JSON-LD experiments
+
+Files in the /json-ld folder are attempts to find solutions to the age-old "edge properties problem" of RDF. Discussion of this is [issue 1 in this repo](#1) [@kgeographer, @gklyne]
+
+- json-ld/place-v{n}-example.jsonld: _sample record_
+
+- json-ld/place-v{n}-context.jsonld: _JSON-LD context_
 
 [latest example @ JSON-LD playground](http://tinyurl.com/yd5brj66)
 
