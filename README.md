@@ -12,7 +12,7 @@ PGIFv2 is valid GeoJSON. A challenge remains to convert place records represente
 
 #### JSON-LD experiments
 
-Files in the /json-ld folder are attempts to find solutions to the age-old "edge properties problem" of RDF. Discussion of this is [issue 1 in this repo](#1) [@kgeographer, @gklyne]
+Files in the /json-ld folder are attempts to find solutions to the age-old "edge properties problem" of RDF. Discussion of this is [issue 1 in this repo](#1) (@kgeographer, @gklyne)
 
 - json-ld/place-v{n}-example.jsonld: _sample record_
 
