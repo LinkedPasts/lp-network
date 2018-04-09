@@ -1,0 +1,103 @@
+{
+  "type": "Feature",
+  "labels": [{ 
+    "value": "Athens", 
+    "lang": "en"}
+  ],
+  "properties": {
+    "label": "Athens",
+    "id": "p1234",
+    "uri": "http://mygaz.org/places/p1234",
+    "prop_012": ""
+  },
+  "description": { 
+    "value": "A major Greek city-state",
+    "lang": "en", 
+    "source": "uri"
+  },
+  "modern_countries": ["GR"], 
+  "when": {
+    "timespans": [ { "start": {"in": "-0750"}, "end": {"in": "0640"} } ],
+    "periods": [ {"name": "", "uri": "http://n2t.net/ark:/99152/p03wskd389m"} ],
+    "label": ""
+  },
+  "names": [
+    { "name": "Athenae",
+      "hasAttestation": "uri",
+      "lang": "el-ltn",
+      "when": {}
+    }, 
+    { "name": "Αθήνα", 
+      "lang": "el",
+      "hasAttestation": {
+        "publisher": "uri",
+        "evidence": "uri",
+        "chars": "Αθήνα"
+      }
+    }],
+  "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+      { "type": "Point", 
+        "coordinates": [23.73, 37.98],
+        "when": {"periods": [{"label": "", "uri": ""}]},
+        "source": {"label": "The Atlas of ___", "uri": ""},
+        "representative": "True" 
+      },
+      { "type": "Polygon",
+        "coordinates": [[ [23.68, 37.93],[23.77,37.93],
+            [23.77,38.03],[23.68,38.03],[23.68,37.93] ]],
+        "when": {
+          "label": "",
+          "timespans": [
+            {  
+              "start": {
+                "in": "nnnn-nn"
+              },
+              "end": {
+                "earliest": "nnnn",
+                "latest": "nnnn-nn-nn"
+              }
+            }
+          ]
+        },
+        "source": {"label": "The Atlas of ___", "uri": ""}
+      }
+    ]
+  },
+  "types": [
+    { "label": "inhabited place", "lang": "en", 
+      "uri":"http://vocab.getty.edu/page/aat/300008347"}
+  ],
+  "part_of": [ 
+    { "parent": "uri", 
+      "when": {
+        "timespans":[
+          {
+            "start": {"in": "nnnn"},
+            "end": {"earliest": "-nnnn","latest": "nnnn"}
+          }
+        ],
+        "duration": "~200y"
+      },
+      "label": "for approx. 200 years, sometime between {start} and {end}",
+      "source": "uri"
+    },
+    { "parent": "uri", 
+      "when": {
+        "when": {"periods": [
+          {"label": "", "uri": ""},
+          {"label": "", "uri": ""}
+        ]}
+      },
+      "label": "roughly during the {x} and {y} periods",
+      "source": "uri"
+    }
+  ],
+  "related": [
+    {"type": "exactMatch", "uri": ""},
+    {"type": "closeMatch", "uri": ""},
+    {"type": "primaryTopicOf", "uri": ""},
+    {"type": "seeAlso", "uri": ""}
+  ]
+}

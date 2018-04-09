@@ -1,154 +1,157 @@
 // a PGIF v2 place record; v2e, 8-Apr-2018
-// "when" element appears variously, its complete form below
 // a valid GeoJSON feature, with several "Foreign Members" (aka elements, objects)
+// this is also constitutes a GeoJSON-T extension; "when" appears in various forms
+// candidates formats for "when" appear below this feature
+// contributors: @kgeographer, @aboutgeo, @gklyne
 
 {
-	"type": "Feature",
-	// principal display name; multiple possible, for i18n
-	"labels": [{ 
-		"value": "Athens", 
-		"lang": "en"}
-	],
+  "type": "Feature",
 
-	// these appear in web map popups, typically
-	"properties": {
-		// required
-		"label": "",
-		"id": "{source identifier}",
-		"uri" // landing page for this feature,
-		// optional
-		"prop_n": ""
-	},
+  // principal display name(s); multiple possible, for i18n
+  "labels": [{ 
+    "value": "Athens", 
+    "lang": "en"}
+  ],
 
-	// any length; likely truncated in displays
-	"description": { 
-		"value": "A major Greek city-state",
-		"lang": "en", 
-		"source" "uri"
-	},
+  // these appear in web map popups, typically
+  "properties": {
+    // required
+    "label": "Athens",
+    "id": "p1234",
+    "uri": "http://mygaz.org/places/p1234", // landing page for this feature
+    // optional properties
+    "prop_012": ""
+  },
 
-	// iso_a2 code(s) for containing or overlapping countries; 
-	// invaluable for reconcilitation
-	"modern_countries": ["GR"], 
+  // any length; likely truncated in displays
+  "description": { 
+    "value": "A major Greek city-state",
+    "lang": "en", 
+    "source": "uri"
+  },
 
-	// global temporal expression(s) for the place record
-	// summarizes 'when' statements from name and location
-	// 0 or more timespans and/or named periods 
-	"when": {
-		"timespans": [ { "start": {"in": "-0750"}, "end": {"in": "0640"} } ],
-  	"periods": [ {"name": "", "uri": "http://n2t.net/ark:/99152/p03wskd389m"} ],
-  	"label": ""
-	},
+  // iso_a2 code(s) for containing or overlapping countries; 
+  // invaluable for reconcilitation
+  "modern_countries": ["GR"], 
 
-	// name attestations; could be published elsewhere
-	// and/or detailed here
-	"names": [
-		{	"name": "Athenae",
-			"hasAttestation": "uri",
-			"lang": "el-ltn", // can include appended script tag
-			"when": {} // optional 
-		}, 
-		{	"name": "Αθήνα", 
-			"lang": "el",
-			"hasAttestation": {
-				"publisher": "uri",
-				"evidence": "uri",
-				"chars": "Αθήνα"
-			}
-		}],
+  // global temporal expression(s) for the place record
+  // summarizes 'when' statements from name and location
+  // 0 or more timespans and/or named periods 
+  "when": {
+    "timespans": [ { "start": {"in": "-0750"}, "end": {"in": "0640"} } ],
+    "periods": [ {"name": "", "uri": "http://n2t.net/ark:/99152/p03wskd389m"} ],
+    "label": ""
+  },
 
-	// 1 or more geometries as GeoJSON GeometryCollection
-	// "in the case that the Feature is unlocated..." geometry can be NULL 
-	// per spec https://tools.ietf.org/html/rfc7946
-	"geometry": {
-		"type": "GeometryCollection",
-		"geometries": [
-			{	"type": "Point", 
-				"coordinates": [23.73, 37.98],
+  // name attestations; could be published elsewhere
+  // and/or detailed here
+  "names": [
+    { "name": "Athenae",
+      "hasAttestation": "uri",
+      "lang": "el-ltn", // can include appended script tag
+      "when": {} // optional 
+    }, 
+    { "name": "Αθήνα", 
+      "lang": "el",
+      "hasAttestation": {
+        "publisher": "uri",
+        "evidence": "uri",
+        "chars": "Αθήνα"
+      }
+    }],
 
-				// optional 'when' and 'source' per geometry
-				// ex. single named period defined elsewhere
-		    "when": {"periods": [{"label": "", "uri": ""}]},
+  // one or more geometries as GeoJSON GeometryCollection
+  // "in the case that the Feature is unlocated..." geometry can be NULL 
+  // per spec https://tools.ietf.org/html/rfc7946
+  "geometry": {
+    "type": "GeometryCollection",
+    "geometries": [
+      { "type": "Point", 
+        "coordinates": [23.73, 37.98],
 
-		    // source of this geometry
-				"source": {"label": "The Atlas of ___", "uri": ""},
+        // optional 'when' and 'source' per geometry
+        // ex. single named period defined elsewhere
+        "when": {"periods": [{"label": "", "uri": ""}]},
 
-				// 'representative point'; req. if more than one
-				"representative": "True" 
-			},
-			{	"type": "Polygon",
-		    "coordinates": [[ [23.68, 37.93],[23.77,37.93],
-		    		[23.77,38.03],[23.68,38.03],[23.68,37.93] ]],
-		    // ex. 3-part timespan, varying granularity
-		    "when": {
-					"label": "",
-					"timespans": [
-						{	
-							"start": {
-								"in": "nnnn-nn"
-							},
-							"end": {
-								"earliest": "nnnn",
-								"latest": "nnnn-nn-nn"
-							},
-						}
-					]
-				},
-				"source": {"label": "The Atlas of ___", "uri": ""},
-			}
-		]
-	},
-	// place types
-	// uri req. if term belongs to published vocabulary
-	// lang optional, for potential i18n 
-	"types": [
-		{	"label": "inhabited place", "lang": "en", 
-			"uri":"http://vocab.getty.edu/page/aat/300008347"}
-	],
+        // source of this geometry
+        "source": {"label": "The Atlas of ___", "uri": ""},
 
-	// parent polities/admin. divisions/places generally
-	// TODO: 'part_of' relation needs a scope note
-	"part_of": [ 
-		{	"parent": "uri", 
-			"when": {
-				"timespans":[
-					{
-						"start": {"in": "nnnn"},
-						"end": {"earliest": "-nnnn","latest": "nnnn"}
-					}
-				],
-				"duration": "~200y",
-			},
-			"label": "for approx. 200 years sometime between {start} and {end}",
+        // 'representative point'; req. if more than one
+        "representative": "True" 
+      },
+      { "type": "Polygon",
+        "coordinates": [[ [23.68, 37.93],[23.77,37.93],
+            [23.77,38.03],[23.68,38.03],[23.68,37.93] ]],
+        // ex. 3-part timespan, varying granularity
+        "when": {
+          "label": "",
+          "timespans": [
+            {  
+              "start": {
+                "in": "nnnn-nn"
+              },
+              "end": {
+                "earliest": "nnnn",
+                "latest": "nnnn-nn-nn"
+              }
+            }
+          ]
+        },
+        "source": {"label": "The Atlas of ___", "uri": ""}
+      }
+    ]
+  },
+  // place types
+  // uri req. if term belongs to published vocabulary
+  // lang optional, for potential i18n 
+  "types": [
+    { "label": "inhabited place", "lang": "en", 
+      "uri":"http://vocab.getty.edu/page/aat/300008347"}
+  ],
 
-			// source of this part_of relation assertion
-			"source": "uri"
-		},
-		{ "parent": "uri", 
+  // parent polities/admin. divisions/places generally
+  // TODO: 'part_of' relation needs a scope note
+  "part_of": [ 
+    { "parent": "uri", 
+      "when": {
+        "timespans":[
+          {
+            "start": {"in": "nnnn"},
+            "end": {"earliest": "-nnnn","latest": "nnnn"}
+          }
+        ],
+        "duration": "~200y"
+      },
+      "label": "for approx. 200 years, sometime between {start} and {end}",
 
-			// ex. this parthood overlaps with multiple periods
-			"when": {
-				"when": {"periods": [
-					{"label": "", "uri": ""},
-					{"label": "", "uri": ""}
-				]},
-			},
-			"label": "roughly during the {x} and {y} periods",
-			"source": "uri"
-		}
-	],
+      // source of this part_of relation assertion
+      "source": "uri"
+    },
+    { "parent": "uri", 
 
-	// resource links; any number
-	"related": [
-		{"type": "exactMatch", "uri"},
-		{"type": "closeMatch", "uri"},
-		{"type": "primaryTopicOf", "uri"}
-		{"type": "seeAlso", "uri"}
-	]
+      // ex. this parthood overlaps with multiple periods
+      "when": {
+        "when": {"periods": [
+          {"label": "", "uri": ""},
+          {"label": "", "uri": ""}
+        ]}
+      },
+      "label": "roughly during the {x} and {y} periods",
+      "source": "uri"
+    }
+  ],
+
+  // resource links; any number
+  "related": [
+    {"type": "exactMatch", "uri": ""},
+    {"type": "closeMatch", "uri": ""},
+    {"type": "primaryTopicOf", "uri": ""},
+    {"type": "seeAlso", "uri": ""}
+  ]
 }
 
 
-// *** WHEN n***
+// *** WHEN ***
 // when elements at the Feature and geometry level are optional; 
 // if included, they MUST include 1 timespan OR 1 period, 
 // and MAY include more of either or both
@@ -157,82 +160,82 @@
 // corresponds with PeriodO
 
 "when": {
-	"label": "",
-	"timespans": [
+  "label": "",
+  "timespans": [
 
-		// ex. 1: starting in Feb 1832, ending after the turn of the century, before June 1910
-		{	
-			"start": {
-				"in": "1832-02"
-			},
-			"end": {
-				"earliest": "1900",
-				"latest": "1910-06"
-			},
-		},
+    // ex. 1: starting in Feb 1832, ending after the turn of the century, before June 1910
+    {  
+      "start": {
+        "in": "1832-02"
+      },
+      "end": {
+        "earliest": "1900",
+        "latest": "1910-06"
+      },
+    },
 
-		// ex. 2: for about a year, between 10BCE and 5CE
-		{	"start": { "in": "-0010" },
-			"end": { "in": "0005" },
+    // ex. 2: for about a year, between 10BCE and 5CE
+    { "start": { "in": "-0010" },
+      "end": { "in": "0005" },
 
-			// optional, can aid timeline vis
-			"duration": "~1y"
-		},
+      // optional, can aid timeline vis
+      "duration": "~1y"
+    },
 
-		// ex. 3: entity/phenomenon valid or existing from 4 July 1776 to present
-		{
-			"start": { "in": "1776-07-04" }
-		}
-	],
-	"periods": [
-		{	"name": "", // any label
-			"uri": "" // interpreted as closeMatch?
-		}
-	],
+    // ex. 3: entity/phenomenon valid or existing from 4 July 1776 to present
+    {
+      "start": { "in": "1776-07-04" }
+    }
+  ],
+  "periods": [
+    { "name": "", // any label
+      "uri": "" // interpreted as closeMatch?
+    }
+  ],
 
-	// for sequences
-	"follows": "#this/id",
+  // for sequences
+  "follows": "#this/id",
 
-	// stub for future; default Gregorian
-	"calendar": ""
+  // stub for future; default Gregorian
+  "calendar": ""
 }
 
 
 // VERSION 2
 "when": {
-	// label for the overall expression
-	"label": "",
-	
-	// >=1; optional; 1-4 ISO-8601 parts
-	"timespans": [
-		{	
-			// interpreted as earliestStart if latestStart
-			"start": "nnnn-nn-nn", 
+  // label for the overall expression
+  "label": "",
+  
+  // >=1; optional; 1-4 ISO-8601 parts
+  "timespans": [
+    {  
+      // interpreted as earliestStart if latestStart
+      "start": "nnnn-nn-nn", 
 
-			// optional; enables 'fuzzy' start/end
-			"latestStart": "nnnn-nn-nn",
-			"earliestEnd": "nnnn-nn-nn",
+      // optional; enables 'fuzzy' start/end
+      "latestStart": "nnnn-nn-nn",
+      "earliestEnd": "nnnn-nn-nn",
 
-			// if no end, interpreted as "present" or now()
-			// if earliestEnd, interpreted as latestEnd 
-			"end": "nnnn-nn-nn",
+      // if no end, interpreted as "present" or now()
+      // if earliestEnd, interpreted as latestEnd 
+      "end": "nnnn-nn-nn",
 
-			// Optional, 'for {duration} during' timespan described above
-			// if omitted, phenomena is 'throughout' timespan
-			"duration": "3m" // d, m, y
-		}
-	],
-	// >=1, optional
-	"periods": [
-		{	"name": "", 
-			"uri": ""
-		}
-	],
+      // Optional, 'for {duration} during' timespan described above
+      // if omitted, phenomena is 'throughout' timespan
+      "duration": "3m" // d, m, y
+    }
+  ],
+  // >=1, optional
+  "periods": [
+    {  "name": "", 
+      "uri": ""
+    }
+  ],
 
-	// optional, for sequences
-	"follows": "<uri>",
+  // optional, for sequences
+  "follows": "<uri>",
 
-	// optional, stub for future use
-	// default is Gregorian
-	"calendar": ""
+  // optional, stub for future use
+  // default is Gregorian
+  "calendar": ""
 }
