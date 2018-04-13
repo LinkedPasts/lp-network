@@ -5,7 +5,7 @@
     "lang": "en"}
   ],
   "properties": {
-    "label": "Athens",
+    "title": "Athens",
     "id": "p1234",
     "uri": "http://mygaz.org/places/p1234",
     "prop_012": ""
@@ -13,7 +13,7 @@
   "description": { 
     "value": "A major Greek city-state",
     "lang": "en", 
-    "source": "uri"
+    "source": {"label": "", "uri": ""}
   },
   "modern_countries": ["GR"], 
   "when": {
@@ -23,16 +23,16 @@
   },
   "names": [
     { "name": "Athenae",
-      "hasAttestation": "uri",
       "lang": "el-ltn",
+      "hasAttestation": {"evidence":"uri"},
+      "note": "",
       "when": {}
-    }, 
+    },
     { "name": "Αθήνα", 
       "lang": "el",
       "hasAttestation": {
         "publisher": "uri",
-        "evidence": "uri",
-        "chars": "Αθήνα"
+        "evidence": "uri"
       }
     }],
   "geometry": {
@@ -65,13 +65,15 @@
       }
     ]
   },
-  "types": [
+  "placetypes": [
     { "label": "inhabited place", "lang": "en", 
       "uri":"http://vocab.getty.edu/page/aat/300008347"}
   ],
   "part_of": [ 
-    { "parent": "uri", 
+    { "uri": "http://somegaz.org/places/1234",
+    	"label": "containing place name", 
       "when": {
+      	"label": "for approx. 200 years, sometime between {start} and {end}",
         "timespans":[
           {
             "start": {"in": "nnnn"},
@@ -80,18 +82,18 @@
         ],
         "duration": "~200y"
       },
-      "label": "for approx. 200 years, sometime between {start} and {end}",
-      "source": "uri"
+      "source": {"label": "", "uri": ""}
     },
-    { "parent": "uri", 
+    { "uri": "http://somegaz.org/places/2345",
+    	"label": "containing place name",  
       "when": {
-        "when": {"periods": [
+	      "label": "roughly during the periods {x} and {y}",
+      	"periods": [
           {"label": "", "uri": ""},
           {"label": "", "uri": ""}
-        ]}
+        ]
       },
-      "label": "roughly during the {x} and {y} periods",
-      "source": "uri"
+      "source": {"label": "", "uri": ""}
     }
   ],
   "related": [

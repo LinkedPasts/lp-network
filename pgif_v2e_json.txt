@@ -1,4 +1,4 @@
-// a PGIF v2 place record; v2e, 8-Apr-2018
+// a PGIF v2 place record; v2e, 13-Apr-2018
 // a valid GeoJSON feature, with several "Foreign Members" (aka elements, objects)
 // this is also constitutes a GeoJSON-T extension; "when" appears in various forms
 // candidates formats for "when" appear below this feature
@@ -16,7 +16,7 @@
   // these appear in web map popups, typically
   "properties": {
     // required
-    "label": "Athens",
+    "title": "Athens",
     "id": "p1234",
     "uri": "http://mygaz.org/places/p1234", // landing page for this feature
     // optional properties
@@ -27,7 +27,7 @@
   "description": { 
     "value": "A major Greek city-state",
     "lang": "en", 
-    "source": "uri"
+    "source": {"label": "", "uri": ""}
   },
 
   // iso_a2 code(s) for containing or overlapping countries; 
@@ -47,16 +47,16 @@
   // and/or detailed here
   "names": [
     { "name": "Athenae",
-      "hasAttestation": "uri",
-      "lang": "el-ltn", // can include appended script tag
+      "lang": "el-ltn", // appended script tag optional
+      "hasAttestation": {"evidence": "uri"},
+      "note": "",
       "when": {} // optional 
     }, 
     { "name": "Αθήνα", 
       "lang": "el",
       "hasAttestation": {
         "publisher": "uri",
-        "evidence": "uri",
-        "chars": "Αθήνα"
+        "evidence": "uri"
       }
     }],
 
@@ -97,14 +97,14 @@
             }
           ]
         },
-        "source": {"label": "The Atlas of ___", "uri": ""}
+        "source": {"label": "", "uri": ""}
       }
     ]
   },
   // place types
-  // uri req. if term belongs to published vocabulary
+  // uri if term belongs to published vocabulary
   // lang optional, for potential i18n 
-  "types": [
+  "placetypes": [
     { "label": "inhabited place", "lang": "en", 
       "uri":"http://vocab.getty.edu/page/aat/300008347"}
   ],
@@ -112,8 +112,10 @@
   // parent polities/admin. divisions/places generally
   // TODO: 'part_of' relation needs a scope note
   "part_of": [ 
-    { "parent": "uri", 
+    { "uri": "http://somegaz.org/places/1234",
+      "label": "containing place name", 
       "when": {
+        "label": "for approx. 200 years, sometime between {start} and {end}",
         "timespans":[
           {
             "start": {"in": "nnnn"},
@@ -122,22 +124,20 @@
         ],
         "duration": "~200y"
       },
-      "label": "for approx. 200 years, sometime between {start} and {end}",
 
       // source of this part_of relation assertion
-      "source": "uri"
+      "source": {"label": "", "uri": ""}
     },
-    { "parent": "uri", 
-
-      // ex. this parthood overlaps with multiple periods
+    { "uri": "http://somegaz.org/places/2345", 
+      "label": "containing place name", 
+      // ex. multiple periods
       "when": {
-        "when": {"periods": [
+        "periods": [
           {"label": "", "uri": ""},
-          {"label": "", "uri": ""}
-        ]}
-      },
-      "label": "roughly during the {x} and {y} periods",
-      "source": "uri"
+          {"label": "", "uri": ""}],       
+        "label": "roughly during the {x} and {y} periods"
+      }
+      "source": {"label": "", "uri": ""}
     }
   ],
 
