@@ -10,5 +10,4 @@ A collective workspace for technical matters related to linking historical resea
 
 ![An emerging Linked Pasts Network][network]
 
-[network]: https://github.com/LinkedPasts/lp-network/raw/master/images/lp-network_20180226.png
-
+[network]: https://github.com/LinkedPasts/lp-network/raw/master/images/lp-network_201804.png
