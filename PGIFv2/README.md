@@ -1,5 +1,7 @@
 #### Place Interconnection Format (PGIFv2)
 
+*NOTE: In active development, contact @kgeographer for current status*
+
 Work-in-progress update to the [Pelagios Gazetteer Interconnection Format (PGIF)](https://github.com/pelagios/pelagios-cookbook/wiki/Pelagios-Gazetteer-Interconnection-Format), for future use in contributing to [Peripleo](http://peripleo.pelagios.org) and [World-Historical Gazetteer](http://whgazetteer.org). The format constitutes an example of a proposed GeoJSON extension, [GeoJSON-T](https://github.com/kgeographer/geojson-t)
 
 PGIFv2 is valid GeoJSON. A challenge remains to convert place records represented this way to a valid RDF syntax, e.g. JSON-LD or RDF/XML. Some experimentation is under way (see below), which will be informed by upcoming work on an updated JSON-LD spec (1.0 -> 1.1) in summer of 2018.

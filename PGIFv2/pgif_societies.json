@@ -1,5 +1,73 @@
-{"type":"FeatureCollection",
-"features":[{"type": "Feature", "properties": {"id": "xd1", "title": "!Kung", "uri": "http://d-place.org/societies/xd1", "placeid": "10013912", "dataset": "dplace"}, "labels": [{"value": "!Kung", "lang": ""}], "description": "A D-Place society", "when": {}, "names": [{"name": "!Kung", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/SCCS2", "chars": "!Kung", "when": {}}}, {"name": "Kung Bushmen", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/SCCS2", "chars": "Kung Bushmen", "when": {}}}, {"name": "!Kung (Was Nyae)", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/SCCS2", "chars": "!Kung (Was Nyae)", "when": {}}}, {"name": "Was Nyae", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/SCCS2", "chars": "Was Nyae", "when": {}}}], "modern_countries": ["BW"], "geometry": {"type": "GeometryCollection", "geometries": [{"type": "Point", "coordinates": [20.58, -19.83], "when": {}, "source": {"label": "dplace", "uri": "http://d-place.org/societies/"}, "representative": true}, {"type": "Point", "coordinates": [21.18, -20.0], "when": {}, "source": {"label": "dplace", "uri": "http://d-place.org/societies/B72"}, "representative": true}, {"type": "Point", "coordinates": [21.0, -20.0], "when": {}, "source": {"label": "dplace", "uri": "http://d-place.org/societies/Aa1"}, "representative": true}]}, "placetypes": [], "part_of": [], "related": []},
+{	"type":"FeatureCollection",
+	"features":[
+		{	"type": "Feature", 
+			"properties": {
+				"id": "xd1", 
+				"title": "!Kung", 
+				"uri": "http://d-place.org/societies/xd1", 
+				"placeid": "10013912", 
+				"dataset": "dplace"
+			}, 
+			"labels": [
+				{"value": "!Kung", "lang": ""}], 
+			"description": "A D-Place society", 
+			"when": {},
+			"names": [
+				{	"name": "!Kung", 
+					"hasAttestation": {
+						"publisher": "http://d-place.org/", 
+						"lang": "", 
+						"evidence": "http://d-place.org/societies/SCCS2", 
+						"chars": "!Kung", 
+						"when": {}
+					}}, 
+				{	"name": "Kung Bushmen", 
+					"hasAttestation": {
+						"publisher": "http://d-place.org/", 
+						"lang": "", 
+						"evidence": "http://d-place.org/societies/SCCS2", 
+						"chars": "Kung Bushmen", 
+						"when": {}
+					}}, 
+				{	"name": "!Kung (Was Nyae)", 
+					"hasAttestation": {
+						"publisher": "http://d-place.org/", 
+						"lang": "", 
+						"evidence": "http://d-place.org/societies/SCCS2", 
+						"chars": "!Kung (Was Nyae)", 
+						"when": {}
+					}}, 
+				{ "name": "Was Nyae", 
+					"hasAttestation": {
+						"publisher": "http://d-place.org/", 
+						"lang": "", 
+						"evidence": "http://d-place.org/societies/SCCS2", 
+						"chars": "Was Nyae", 
+						"when": {}
+					}}
+			], 
+			"modern_countries": ["BW"], 
+			"geometry": {
+				"type": "GeometryCollection", 
+				"geometries": [
+					{	"type": "Point", "coordinates": [20.58, -19.83], 
+						"when": {}, 
+						"source": {"label": "dplace", "uri": "http://d-place.org/societies/"}, 
+						"representative": true}, 
+					{ "type": "Point", "coordinates": [21.18, -20.0], 
+						"when": {}, 
+						"source": {"label": "dplace", "uri": "http://d-place.org/societies/B72"}, 
+						"representative": true}, 
+					{	"type": "Point", "coordinates": [21.0, -20.0], 
+						"when": {}, 
+						"source": {"label": "dplace", "uri": "http://d-place.org/societies/Aa1"}, 
+						"representative": true}
+				]
+			}, 
+			"placetypes": [], 
+			"part_of": [], 
+			"related": []
+	},
 {"type": "Feature", "properties": {"id": "xd10", "title": "Herero", "uri": "http://d-place.org/societies/xd10", "placeid": "10013913", "dataset": "dplace"}, "labels": [{"value": "Herero", "lang": ""}], "description": "A D-Place society", "when": {}, "names": [{"name": "Herero", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/Ab1", "chars": "Herero", "when": {}}}, {"name": "Damara", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/Ab1", "chars": "Damara", "when": {}}}, {"name": "Ovaherero", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/Ab1", "chars": "Ovaherero", "when": {}}}], "modern_countries": ["NA"], "geometry": {"type": "GeometryCollection", "geometries": [{"type": "Point", "coordinates": [16.0, -21.0], "when": {}, "source": {"label": "dplace", "uri": "http://d-place.org/societies/"}, "representative": true}]}, "placetypes": [], "part_of": [], "related": []},
 {"type": "Feature", "properties": {"id": "xd100", "title": "Duruma", "uri": "http://d-place.org/societies/xd100", "placeid": "10013914", "dataset": "dplace"}, "labels": [{"value": "Duruma", "lang": ""}], "description": "A D-Place society", "when": {}, "names": [{"name": "Duruma", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/Ad31", "chars": "Duruma", "when": {}}}, {"name": "Waduruma", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/Ad31", "chars": "Waduruma", "when": {}}}], "modern_countries": ["KE"], "geometry": {"type": "GeometryCollection", "geometries": [{"type": "Point", "coordinates": [39.0, -4.0], "when": {}, "source": {"label": "dplace", "uri": "http://d-place.org/societies/"}, "representative": true}]}, "placetypes": [], "part_of": [], "related": []},
 {"type": "Feature", "properties": {"id": "xd1000", "title": "Kuskowagmut", "uri": "http://d-place.org/societies/xd1000", "placeid": "10013915", "dataset": "dplace"}, "labels": [{"value": "Kuskowagmut", "lang": ""}], "description": "A D-Place society", "when": {}, "names": [{"name": "Kuskowagmut", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/B296", "chars": "Kuskowagmut", "when": {}}}, {"name": "", "hasAttestation": {"publisher": "http://d-place.org/", "lang": "", "evidence": "http://d-place.org/societies/B296", "chars": "", "when": {}}}], "modern_countries": ["US"], "geometry": {"type": "GeometryCollection", "geometries": [{"type": "Point", "coordinates": [-161.55, 61.01], "when": {}, "source": {"label": "dplace", "uri": "http://d-place.org/societies/"}, "representative": true}]}, "placetypes": [], "part_of": [], "related": []},

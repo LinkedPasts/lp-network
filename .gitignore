@@ -1,3 +1,6 @@
 ## .gitignore
+issues/
 older/
 misc/
+sql/
+images/.DS_Store
