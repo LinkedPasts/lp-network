@@ -1,0 +1,111 @@
+{"@context": {
+  "lpo": "http://linkedpasts.org/ontology#",
+  "aat": "http://vocab.getty.edu/aat/",
+  "cc": "http://creativecommons.org/licenses/",
+  "characters": "http://www.w3.org/2011/content#chars",
+  "cito": "http://purl.org/spar/cito#",
+  "crm": "http://erlangen-crm.org/current/",
+  "dct": "http://purl.org/dc/terms/",
+  "foaf": "http://xmlns.com/foaf/0.1/",
+  "gn": "http://www.geonames.org/ontology#",
+  "gvp": "http://vocab.getty.edu/ontology#",
+  "lawd": "http://lawd.info/ontology/",
+  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "skos": "http://www.w3.org/2004/02/skos/core#",
+  "w3cgeo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+  "geo":"http://www.opengis.net/ont/geosparql#",
+  "periodo": "http://n2t.net/ark:/99152/#",
+
+  "geojson": "https://purl.org/geojson/vocab#",
+  "Feature": "geojson:Feature",
+  "FeatureCollection": "geojson:FeatureCollection",
+  "GeometryCollection": "geojson:GeometryCollection",
+  "LineString": "geojson:LineString",
+  "MultiLineString": "geojson:MultiLineString",
+  "MultiPoint": "geojson:MultiPoint",
+  "MultiPolygon": "geojson:MultiPolygon",
+  "Point": "geojson:Point",
+  "Polygon": "geojson:Polygon",
+  "bbox": { "@container": "@list", "@id": "geojson:bbox" },
+  "coordinates": { "@container": "@list", "@id": "geojson:coordinates" },
+  "features": { "@container": "@set",  "@id": "geojson:features" },
+  "geometry": "geojson:geometry",
+  "properties": "geojson:properties",
+  "when": {"@id": "lpo:when"},
+  "timespans": { "@container": "@set",  "@id": "lpo:timespans" },
+  "periods": { "@container": "@set",  "@id": "lpo:periods" },
+  "geometries": { "@container": "@set", "@id":"lpo:geometries"},
+
+  "start": "time:intervalStartedBy",
+  "end": "time:intervalFinishedBy",
+  "in": {
+    "@type": "time:generalYear",
+    "@id": "lp:in"
+  },
+  "earliest": {
+    "@type": "time:DateTimeDescription",
+    "@id": "lp:earliest"
+  },
+  "latest": {
+    "@type": "time:DateTimeDescription",
+    "@id": "lp:latest"
+  },
+
+  "id:": "@id",
+  "type": "@type",
+  "value": {"@id": "rdf:value"},
+  "identifier": "dct:identifier",
+  "label": {"@id": "rdfs:label"},
+  "title": {"@id": "dct:title"},
+  "ccode": {"@id": "gn:countryCode"},
+  "license": "dct:license",
+
+  "attestation": {"@id": "lawd:hasAttestation" },
+  "publisher": {"@id": "dct:Publisher"},
+  "evidence": {"@id": "cito:citesAsEvidence"},
+
+  "descriptions": {
+    "@id": "dct:description",
+    "@type": "@id",
+    "@container": "@set"
+  },
+
+  "depictions": {
+    "@id": "foaf:depiction",
+    "@type": "@id",
+    "@container": "@set"
+  },
+
+  "placetypes": {
+    "@id": "gvp:placeTypePreferred",
+    "@type": "@id",
+    "@container": "@set"
+  },
+
+  "namings": {
+    "@id": "lpo:NameAttest",
+    "@container": "@set"
+  },
+  "toponym": "lpo:Toponym",
+  "lang": "dct:language",
+
+  "parthood": {
+    "@id": "lpo:PartAttest",
+    "@container": "@set"
+  },
+  "part_of": {
+    "@id": "gvp:broaderPartitive", 
+    "@type": "@id" },
+
+  "related": {
+    "@id": "dct:relation",
+    "@type": "@id",
+    "@container": "@set"
+  },
+  "primary_topic_of": {"@id": "foaf:isPrimaryTopicOf", "@type":"@id" },
+  "subject_of": {"@id": "crm:P129i_is_subject_of", "@type": "@id"},
+  "close_match": {"@id":"skos:closeMatch", "@type":"@id"},
+  "exact_match": {"@id":"skos:exactMatch", "@type":"@id"},
+  "see_also": {"@id":"rdfs:seeAlso", "@type":"@id"}
+}}
