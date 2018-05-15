@@ -68,7 +68,7 @@
           },
           "@graph": {
             "@id": "http://www.mygaz.org/places/pl_12345",
-            "label": "Αθήνα",
+            "label": "Αθήνα"
           }
         }
       ],
