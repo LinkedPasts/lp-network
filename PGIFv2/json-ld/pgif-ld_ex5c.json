@@ -14,12 +14,12 @@
         "type": "GeometryCollection",
         "geometries": [
           {
-          	"@id": "http://mygaz.org/graphs/geo/01",
-          	"@graph": {
-          		"@id": "http://www.mygaz.org/places/pl_12345",
-          		"geom": "POINT(23.7275 37.9838)^^<geo:wktLiteral>"
+            "@id": "http://mygaz.org/graphs/geo/01",
+            "@graph": {
+              "@id": "http://www.mygaz.org/places/pl_12345",
+              "geom": "POINT(23.7275 37.9838)^^<geo:wktLiteral>"
             },
-          	"when": {"timespans": {"start": {"in": "-1200"}}},
+            "when": {"timespans": {"start": {"in": "-1200"}}},
             "certainty": "certain",
             "type": "Point",
             "coordinates": [23.7275,37.9838]
@@ -59,16 +59,16 @@
       },
       "namings": [
         {
-        	"@id": "http://mygaz.org/graphs/names/01",
-					"when": {},
+          "@id": "http://mygaz.org/graphs/names/01",
+          "when": {},
           "lang": "el",
           "attestation": {
             "publisher": "http://www.mygaz.org",
             "evidence": "http://www.mygaz.org/documents/01234"
           },
-        	"@graph": {
-          	"@id": "http://www.mygaz.org/places/pl_12345",
-          	"label": "Αθήνα",
+          "@graph": {
+            "@id": "http://www.mygaz.org/places/pl_12345",
+            "label": "Αθήνα",
           }
         }
       ],
@@ -80,25 +80,25 @@
       ],
       "parthood": [
         {
-        	"@id": "http://mygaz.org/graphs/part/01",
-      		"when": {
-          	"timespans": [
-		          {
-		            "start": {
-		              "label": "about 750 BCE",
-		              "in": {"earliest": "-775", "latest": "-725"}
-		            },
-		            "end": {
-		              "label": "640 CE",
-		              "in": {"year": "640"}
-		            }
-		          }
-        		]
-        	},
-        	"@graph": {
-        		"@id": "http://www.mygaz.org/places/pl_12345",
-        		"part_of": "http://www.mygaz.org/places/pl_012"
-        	}
+          "@id": "http://mygaz.org/graphs/part/01",
+          "when": {
+            "timespans": [
+              {
+                "start": {
+                  "label": "about 750 BCE",
+                  "in": {"earliest": "-775", "latest": "-725"}
+                },
+                "end": {
+                  "label": "640 CE",
+                  "in": {"year": "640"}
+                }
+              }
+            ]
+          },
+          "@graph": {
+            "@id": "http://www.mygaz.org/places/pl_12345",
+            "part_of": "http://www.mygaz.org/places/pl_012"
+          }
         }
       ],
       "depictions": [
@@ -109,11 +109,11 @@
         }
       ],
       "relations": [
-      	{"exact_match": "http://pleiades.stoa.org/places/579885" },
-      	{"close_match": "http://sws.geonames.org/264371/" },
-      	{"subject_of": "https://en.wikipedia.org/wiki/Athens" },
-      	{"see_also": "https://en.wikipedia.org/wiki/Ancient_Greece" },
-      	{"primary_topic_of": "https://en.wikipedia.org/wiki/Athens" }
+        {"exact_match": "http://pleiades.stoa.org/places/579885" },
+        {"close_match": "http://sws.geonames.org/264371/" },
+        {"subject_of": "https://en.wikipedia.org/wiki/Athens" },
+        {"see_also": "https://en.wikipedia.org/wiki/Ancient_Greece" },
+        {"primary_topic_of": "https://en.wikipedia.org/wiki/Athens" }
       ]
     }
   ]
