@@ -1,0 +1,87 @@
+<!--	Results of JSON-LD Playground validation of draft PGIFv2
+			1 May 2018; @kgeographer -->
+
+<!-- a GeoJSON-compatible FeatureCollection -->
+_:b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.org/geojson/vocab#FeatureCollection> .
+_:b0 <https://purl.org/geojson/vocab#features> <http://mygaz.org/places/p_12345> .
+
+<!-- a single place, has req. properties element
+<http://mygaz.org/places/p_12345> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.org/geojson/vocab#Feature> .
+<http://mygaz.org/places/p_12345> <https://purl.org/geojson/vocab#properties> _:b26 .
+_:b26 <http://purl.org/dc/terms/title> "Abingdon (UK)" .
+_:b26 <http://www.geonames.org/ontology#countryCode> "GB" .
+
+<!--	two blank node nameAttest instances
+			both valid since 1600 -->
+<http://mygaz.org/places/p_12345> <http://linkedpasts.org/ontology/nameAttest> _:b1 .
+_:b1 <http://linkedpasts.org/ontology/Toponym> "Abingdon" .
+_:b1 <http://purl.org/dc/terms/language> "en" .
+_:b1 <http://linkedpasts.org/ontology/when> _:b3 .
+_:b3 <http://linkedpasts.org/ontology/timespans> _:b4 .
+_:b4 <http://www.w3.org/2006/time#intervalStartedBy> "1600" .
+_:b1 <http://lawd.info/ontology/hasAttestation> _:b2 .
+_:b2 <http://purl.org/dc/terms/Publisher> "http://pub.org/" .
+_:b2 <http://purl.org/spar/cito#citesAsEvidence> "http://pub.org/pubs/321/" .
+
+<http://mygaz.org/places/p_12345> <http://linkedpasts.org/ontology/NameAttest> _:b5 .
+_:b5 <http://linkedpasts.org/ontology/Toponym> "Abingdon-on-Thames" .
+_:b5 <http://purl.org/dc/terms/language> "en" .
+_:b5 <http://linkedpasts.org/ontology/when> _:b6 .
+_:b6 <http://linkedpasts.org/ontology/timespans> _:b7 .
+_:b7 <http://www.w3.org/2006/time#intervalStartedBy> "1600" .
+
+<!-- two blank node partAttest instances -->
+<http://mygaz.org/places/p_12345> <http://linkedpasts.org/ontology/PartAttest> _:b11 .
+_:b11 <http://linkedpasts.org/ontology/Parent> "mygaz:places/p_3456" .
+_:b11 <http://linkedpasts.org/ontology/when> _:b12 .
+_:b11 <http://www.w3.org/2000/01/rdf-schema#label> "Oxfordshire (UK)" .
+_:b12 <http://linkedpasts.org/ontology/timespans> _:b13 .
+_:b13 <http://www.w3.org/2006/time#intervalStartedBy> "1974" .
+
+<http://mygaz.org/places/p_12345> <http://linkedpasts.org/ontology/PartAttest> _:b8 .
+_:b8 <http://www.w3.org/2000/01/rdf-schema#label> "Berkshire (UK)" .
+_:b8 <http://linkedpasts.org/ontology/Parent> "mygaz:places/p_9876" .
+_:b8 <http://linkedpasts.org/ontology/when> _:b9 .
+_:b9 <http://linkedpasts.org/ontology/timespans> _:b10 .
+_:b10 <http://www.w3.org/2006/time#intervalFinishedBy> "1974" .
+_:b10 <http://www.w3.org/2006/time#intervalStartedBy> "1600" .
+
+<!--	two blank node geometries in GeometryCollection, with GeoJSON coords 
+			only Point coordinates validate in LD, so added optional WKT -->
+
+<!-- geometry #1: valid 1600-1699 -->
+<http://mygaz.org/places/p_12345> <https://purl.org/geojson/vocab#geometry> _:b19 .
+_:b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.org/geojson/vocab#GeometryCollection> .
+_:b19 <http://linkedpasts.org/ontology/geometries> _:b20 .
+_:b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.org/geojson/vocab#Point> .
+_:b20 <https://purl.org/geojson/vocab#coordinates> _:b27 .
+_:b27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "-1.2879E0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:b27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b28 .
+_:b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "5.16708E1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b20 <http://linkedpasts.org/ontology/when> _:b21 .
+_:b21 <http://linkedpasts.org/ontology/timespans> _:b22 .
+_:b22 <http://www.w3.org/2006/time#intervalFinishedBy> "1699" .
+_:b22 <http://www.w3.org/2006/time#intervalStartedBy> "1600" .
+_:b20 <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-1.2879 51.6708)" .
+
+<!-- geometry #2: valid 1700-present -->
+_:b19 <http://linkedpasts.org/ontology/geometries> _:b23 .
+_:b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.org/geojson/vocab#Point> .
+_:b23 <https://purl.org/geojson/vocab#coordinates> _:b29 .
+_:b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "-1.3E0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b30 .
+_:b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "5.168E1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+
+_:b23 <http://linkedpasts.org /ontology/when> _:b24 .
+_:b24 <http://linkedpasts.org/ontology/timespans> _:b25 .
+_:b25 <http://www.w3.org/2006/time#intervalStartedBy> "1700" .
+_:b23 <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-1.30 51.68)" .
+
+<!-- Additional properties, not temporally scoped -->
+<http://mygaz.org/places/p_12345> <http://linkedpasts.org/ontology/when> _:b14 .
+<http://mygaz.org/places/p_12345> <http://purl.org/dc/terms/description> _:b15 .
+<http://mygaz.org/places/p_12345> <http://purl.org/dc/terms/relation> _:b16 .
+<http://mygaz.org/places/p_12345> <http://vocab.getty.edu/ontology#placeTypePreferred> _:b17 .
+<http://mygaz.org/places/p_12345> <http://xmlns.com/foaf/0.1/depiction> _:b18 .
