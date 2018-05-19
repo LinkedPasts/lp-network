@@ -1,5 +1,5 @@
 <!--	Results of JSON-LD Playground validation of draft PGIFv2
-			1 May 2018; @kgeographer -->
+			19 May 2018; @kgeographer -->
 
 <!-- a GeoJSON-compatible FeatureCollection -->
 _:b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.org/geojson/vocab#FeatureCollection> .
